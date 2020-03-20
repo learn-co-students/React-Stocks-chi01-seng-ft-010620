@@ -5,9 +5,12 @@ class PortfolioContainer extends Component {
 
   render() {
     return (
-      <div>
+      <div onClick={(event)=>{console.log("event",event)}}>
         <h2>My Portfolio</h2>
           {
+            this.props.myPorfolio.map(myStock=>{
+              return <Stock stocks={myStock}/>
+            })
             //render your portfolio stocks here
           }
       </div>
